@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+p, h1{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-color:#222;
+}
+
+.wrapper{
+	width:960px;
+	margin: 0 auto;
+}
+
+.wrapper::after{
+	content:' ';
+	clear:both;
+	display:block;
+}
+
+.sec{
+	width:240px;
+	padding:30px;
+	text-align:center;
+	float:left;
+	margin-right:30px;
+}
+
+
+.sec:last-child{
+	margin-right:0;
+}
+
+.sec.blue{
+	background-color:dodgerblue;
+	color:yellow;
+}
+
+
+.sec.red{
+	background-color:orangered;
+	color:yellow;
+}
+
+
+.sec.yellow{
+	background-color:yellow;
+	color:orangered;
+}
+
+
+.sec::after {
+	content:' ';
+	clear:left;
+	display:block;
+}
+
+.sec h1{
+	font-family:'Anton', sans-serif;
+	line-height:1;
+	margin-bottom:30px;
+	font-size:90px;
+	font-weight:normal;
+	display:inline-block;
+}
+.sec h1 span {
+	font-size:0.5em;
+	margin:0 0.35em;
+	opacity:0.5;
+}
+
+.sec h1 span::after {
+	content:'kcal';
+	font-size:0.5em;
+	margin:0 0.1em;
+}
+
+.section-cover{
+	width:200px;
+	margin: 0 auto;
+	transition: margin .5s;
+}
+
+.sec::after{
+	clear:both;
+	content: " ";
+	display:block;
+}
+
+.sec p {	
+	padding:0 20px;
+	line-height:1.5;
+}
+

@@ -1,0 +1,203 @@
+p, h1, body{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-color:lightgray;
+}
+
+.wrapper{
+	margin:150px auto;
+	width:900px;
+}
+
+.sidebar{
+	width:250px;
+	float:right;
+	margin-left:20px;
+	text-align:center;
+	color:#555;
+}
+
+.sidebar-section{
+	margin:20px 0;
+}
+
+.clearfix::after{
+	clear:both;
+	display:block;
+	content:'';
+}
+
+.content{
+		padding: 30px;
+		display:flow-root;
+	}
+
+.sidebar,
+.content{
+	border-radius:10px;
+	background-color:white;
+}
+
+.cover{
+	width:100%;
+	margin-top:-100px;
+}
+
+.title{
+	color:#6797b2;
+	line-height:1;
+}
+
+.price{
+	color:#6797b2;
+	font-size:20px;
+}
+
+
+.price::before{
+	content:'$';
+	font-size:0.7em;
+	margin-right:0.2em;
+	vertical-align:middle;
+	opacity:0.5;
+}
+
+.button{
+	background-color:#6797b2;
+	color:white;
+	font-size:0.7em;
+	display:block;
+	margin: 5px 20px;
+	padding:10px 0;
+	font-weight:bold;
+	letter-spacing:0.2em;
+	text-indent:0.2em;
+}
+
+.button.share{
+	background-color:#BBB;
+}
+
+.section{
+	margin-bottom:20px;
+}
+
+.section:last-child{
+	margin-bottom:0px;
+}
+
+
+.section h2{
+	color: #6797b2;
+	margin-bottom:20px;
+	border-bottom:2px solid #ddd;
+}
+
+.message{
+	margin-bottom:10px;
+	overflow:hidden;
+}
+
+.message:last-child{
+	margin-bottom:0;
+}
+
+
+.message.answer .message-profile{
+		float:right;
+}
+
+.message.answer .message-profile::after{
+		display:none;
+}
+
+.message.answer .message-profile::before{
+		display:inline-block;
+}
+
+.message-profile{
+	float:left;
+}
+
+.message-profile::after,
+.message-profile::before,
+.message-profile img{
+	vertical-align:middle;
+}
+
+.message-profile img{
+	border-radius:50%;
+}
+
+
+.message-profile::after,
+.message-profile::before{
+
+	content:' ';
+	display:inline-block;
+	width:'';
+	height:'';
+	border-style:solid;
+	border-width:10px;
+}
+
+.message-contents{
+	overflow:hidden;
+	padding:20px;
+	background-color:#ddd;
+	border-radius:3px;
+}
+
+
+.message-profile::before{
+	border-color:transparent transparent transparent #ddd ;
+	display:none;
+}
+
+
+.message-profile::after{
+	border-color:transparent #ddd transparent transparent;
+}
+
+
+.star::before,
+.star {
+	display:inline-block;
+	width:150px;
+	height:30px;
+	background-image:url("images/star-sprite.png");
+	overflow:hidden;
+}
+
+
+.star::before {
+	content:' ';
+	display:block;
+	width:0;
+	background-position:left bottom;
+}
+
+
+.star.s01::before {
+	width:20%;
+}
+.star.s02::before {
+	width:40%;
+}
+.star.s03::before {
+	width:60%;
+}
+.star.s04::before {
+	width:80%;
+}
+.star.s05::before {
+	width:100%;
+}
+
+
+
+
+

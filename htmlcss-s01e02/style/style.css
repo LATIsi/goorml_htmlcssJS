@@ -1,0 +1,87 @@
+body{
+	background-image:url(../images/background.gif);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.all {
+	background-color:#ddd;
+	width:60%;
+	margin: 40px auto;
+
+}
+
+p, u1, h1, h2{
+	margin:0;
+	padding:0;
+}
+
+li{
+	list-style-type:none;
+}
+
+.header{
+	width:100%;
+	padding-bottom:20px;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-image: url("../images/halloween-header-bg.png");
+}
+
+.header h1{
+	color:white;
+}
+
+.header p{
+	background-color:black;
+	color:gray;
+	width:80%;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.header .headerimage{
+	padding-top:30px;
+}
+
+.contents{
+	padding:20px;
+	background-color:lightgray;
+}
+
+.setion{
+	background-color:white;
+	margin: 10px 20px;
+	padding: 20px 30px;
+	background-image: url("../images/icon-information.png");
+	background-repeat:no-repeat;
+	background-position: right 30px center; 
+}
+
+.skill{
+	background-image: url("../images/icon-skills.png");
+}
+
+.contents .setion h2{
+	color:orange;
+}
+
+.contents .setion ul{
+	border-left: 4px solid lightgray;
+}
+
+.contents .setion li{
+	margin:10px;
+}
+
+.contents .setion li:hover{
+	color:orange;
+}
+
+
+.footer{
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:10px;
+}

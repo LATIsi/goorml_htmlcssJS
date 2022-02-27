@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+h1,p,body,h2{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background-color:#ddd
+}
+
+.cover{
+	background-color:antiquewhite;
+	color:white;
+	height:50vh;
+	background-size:cover;
+	position:relative;
+	font-size:4vw;
+	background-position:center;
+	background-image:url(images/background.png);
+}
+
+.cover h1{
+	line-height:1;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	background-color:orangered;
+	border-radius:5px;
+	padding:0.15em 0.4em 0.23em;
+	font-family:'Alata', sans-serif;
+}
+
+.wrapper{
+	width:900px;
+	margin: 80px auto;
+}
+
+.section{
+	background-color:white;
+	margin: 50px 0;
+	padding:30px;
+	border-radius:5px;
+	color:#999;
+	text-align:right;
+	position:relative;
+}
+
+.clearfix:after{
+	content:' ';
+	display:block;
+	clear:both;
+}
+
+.section h2{
+	margin-bottom:20px;
+	border-bottom:solid 10px;
+	font-family:'Alata', sans-serif;
+	font-size:40px;
+	display:inline-block;
+}
+
+.section p{
+	float:left;
+	width:250px;
+	margin-right:20px;
+	line-height:1.6;
+}
+
+.section-contents{
+	display:inline-block;
+}
+
+.section p:last-child{
+	margin-right:0;
+}
+
+.section-cover{
+	position:absolute;
+	left:0;
+	top:50%;
+	width:400px;
+	margin:0 -160px;
+	transform:translateY(-50%);
+}
+
+.section:nth-child(even){
+	text-align:left;
+}
+
+.section:nth-child(even) .section-cover{
+	left:auto;
+	right:0;
+}
+
+.section.STRAWBERRY h2{
+	color:orangered;
+	border-color:forestgreen;
+}
+
+.section.ORANGE h2{
+	color:orange;
+	border-color:antiquewhite;
+}
+
+.section.KIWI h2{
+	color:forestgreen;
+	border-color:#C78c8c;
+}

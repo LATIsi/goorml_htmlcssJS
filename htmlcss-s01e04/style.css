@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+body, ul, p {
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-image:url(./images/bg.png);
+	background-attachment:fixed;
+	background-position:center;
+	margin-bottom:40px;
+}
+
+a	{
+	text-decoration:none;
+	color:inherit;
+}
+
+li	{
+	list-style-type:none;
+}
+
+.wrapper{
+	width:800px;
+	margin: 0 auto;
+	text-align:center;
+	background-image: url("./images/rope.png");
+	background-position:center; 
+}
+
+.logo {
+	background-image: url("./images/logo.png");
+	display:inline-block;
+	width:450px;
+	margin-top: 60px;
+	height:140px;
+}
+
+.logo span{
+	width:1px;
+	height:1px;
+	margin:-1px;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+.menu{
+	width:300px;
+	margin:30px auto;
+	color:#666;
+}
+
+.menu li {
+	margin-bottom: 10px;
+
+}
+
+.menu li a {
+	padding: 5px 0;
+	border: 2px solid;
+	border-radius:20px;
+	display: block;
+}
+
+.menu li a:hover {
+	color: orange;
+}
+
+.section{
+	background-image:url(./images/wood.png);
+	padding: 40px;
+	border: double 10px #3f2217;
+	border-radius:20px;
+	margin: 50px 0;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.2) inset;
+	color:white;
+	
+}
+
+
+.section h1{
+	text-align:left;
+	margin-top:0;
+	font-size:50px;
+	background-repeat:no-repeat;
+	background-position: right 30px center;
+	line-height:174px;
+	font-family:'Merienda One', cursive;
+}
+
+.section:nth-child(even) h1{
+	text-align:right;
+	background-position: left 30px center;
+}
+
+.section h1.ani01{
+	background-image: url(./images/animal01.png);
+	color:orange;
+}
+
+.section h1.ani02{
+	background-image: url(./images/animal02.png);
+	color:orange;
+}
+
+.section h1.ani03{
+	background-image: url(./images/animal03.png);
+	color:orange;
+}
+
+.section h1.ani04{
+	background-image: url(./images/animal04.png);
+	color:orange;
+}
+
+.section h1.ani05{
+	background-image: url(./images/animal05.png);
+	color:orange;
+}
+
+.section h1.ani06{
+	background-image: url(./images/animal06.png);
+	color:orange;
+}
+
+.section h1.ani07{
+	background-image: url(./images/animal07.png);
+	color:orange;
+}
+
+.section p{
+	text-align:left;
+	line-height:1.6;
+}
+
+
+.section p strong{
+	text-align:left;
+	background-color:#883a1d;
+	padding: 0px 20px;
+	border-radius:10px;
+	color:greenyellow;
+}
+.footer{
+	background-color: #7d410d;
+	color:pink;
+	border-bottom: 10px solid rgba(0,0,0,0.3);
+	border-radius:20px;
+	overflow:hidden;
+}
+
+
+.footer::before{
+	content: ' ';
+
+	background-image:url(images/ground.png);
+	background-repeat:repeat-x;
+	display:block;
+	height:50px;
+}
+
+.footer p {
+	padding: 10px 0px;
+}
+
+
