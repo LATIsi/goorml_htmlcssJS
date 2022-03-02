@@ -14,8 +14,31 @@ body{
 }
 
 .wrapper{
-	width:1200px;
+	max-width:1200px;
 	margin: 0 auto;
+	padding:0 20px;
+}
+
+.header{
+	height:50vh;
+	background-image: url("images/cover.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+}
+
+.header h1{
+	text-align:center;
+	display:inline-block;
+	border-bottom:solid 5px white;
+	border-top:solid 5px white;
+	font-size:4em;
+	line-height:1.2;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
 }
 
 .timeline{
@@ -105,6 +128,35 @@ body{
 	line-height:1.4em;
 	color:#999;
 }
+
+@media (max-width:700px){
+	.timeline-item,
+	.timeline-item:nth-child(even){
+		width:auto;
+		margin:0;
+	}
+	
+	.tour-contents h2{
+	font-size:30px;
+	}
+	
+	.timeline::before{
+	left:0;
+	transform:none;
+	}
+	
+	.timeline-item::before,
+	.timeline-item::after{
+		left:0;
+	}
+	
+	
+}
+
+
+
+
+
 
 
 

@@ -1,0 +1,148 @@
+/* 전체 클래스*/
+
+body, h1, h2, p, ul, li{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration:none;
+	color:inherit;
+}
+
+/* 버튼 */
+.button{
+	color:white;
+	padding:0.5em 1em;
+	background-color:#333;
+	display:inline-block;
+}
+
+.button_block{
+	display:block;
+	text-align:center;
+}
+
+.button_important{
+	background-color:orangered;
+}
+
+/* util*/
+
+.mb_5{margin-bottom: 5px;}
+.mb_10{margin-bottom: 10px;}
+.mb_15{margin-bottom: 15px;}
+.mb_20{margin-bottom: 20px;}
+
+
+/*컴포넌트 클래스*/
+
+body{
+	background-image:url("images/bg.png");
+	color:#999;
+}
+
+
+.content{
+	margin: 50px auto;	
+}
+
+
+/* 레이아웃 클래스(l_)*/
+
+.l_wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+.l_sidebar{
+	background-color:orange;
+	float:right;
+	margin-left:30px;
+	width:300px;
+}
+
+.l_main{
+	overflow:hidden;
+}
+
+.checkout{
+	background-color:#222;
+}
+
+.checkout-sectcion{
+	margin:20px;
+}  
+
+.video{
+	background-color:dodgerblue;
+	padding-top:56.25%;
+	position:relative;
+}
+
+.clearfix::after{
+	display:table;
+	content:'';
+}
+
+
+
+.video-iframe{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
+.price{
+	font-size:40px;
+	font-weight:bold;
+	color:dodgerblue;
+}
+
+.price-discount{
+	font-weight:normal;
+	color:#333;
+	font-size:0.5em;
+	position:relative;
+}
+
+.price-discount:before{
+	content:' ';
+	position:absolute;
+	height:2px;
+	left:0;
+	right:0;
+	bottom:0.6em;
+	opacity:0.5;
+	background-color:white;
+}
+
+.checkout-sectcion-descption{
+	padding:20px 20px;
+}
+
+.course-cover{
+	background-image:url("images/cover.png");
+}
+
+.course-section{
+	background-color:orange;
+	margin: 20px 0;
+}
+
+
+@media (max-width:480px){
+	.sidebar{
+		width:auto;
+		float:none;
+	}
+	
+	.video{
+	width:auto;
+	height:40vw;
+	}
+}
