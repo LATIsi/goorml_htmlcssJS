@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 /* 전체 클래스*/
 
-body, h1, h2, p, ul, li{
+body, h1, h2, h3, p, ul, li,a{
 	margin:0;
 	padding:0;
 }
@@ -8,6 +11,12 @@ body, h1, h2, p, ul, li{
 a{
 	text-decoration:none;
 	color:inherit;
+}
+
+/*글씨 */
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	font-size:100%;
 }
 
 /* 버튼 */
@@ -35,6 +44,14 @@ a{
 .mb_20{margin-bottom: 20px;}
 
 
+.clearfix::before,
+.clearfix::after{
+	clear:both;
+	content:'';
+	display:block;
+}
+
+
 /*컴포넌트 클래스*/
 
 body{
@@ -51,8 +68,9 @@ body{
 /* 레이아웃 클래스(l_)*/
 
 .l_wrapper{
-	width:960px;
+	max-width:960px;
 	margin:0 auto;
+	padding: 0 20px;
 }
 
 .l_sidebar{
@@ -98,14 +116,14 @@ body{
 }
 
 .price{
-	font-size:40px;
+	font-size:35px;
 	font-weight:bold;
-	color:dodgerblue;
+	color:orangered;
 }
 
 .price-discount{
 	font-weight:normal;
-	color:#333;
+	color:#999;
 	font-size:0.5em;
 	position:relative;
 }
@@ -122,20 +140,227 @@ body{
 }
 
 .checkout-sectcion-descption{
-	padding:20px 20px;
+	padding:0.8em;
 }
+
+.checkout-sectcion-list{
+	list-style-type:none;
+}
+
+.checkout-sectcion-list:before{
+	border-color: #999 ;
+	background-color: #999;
+	border-radius:50%;
+	width:7px;
+	height:7px;
+	border-style:solid;
+	margin-right:10px;
+	display:inline-block;
+	content:'';
+}
+
 
 .course-cover{
 	background-image:url("images/cover.png");
+	padding:30px;
+	position:relative;
+	background-position:center;
+	background-size:cover;
 }
 
+
+.course-cover::after{
+	content:'';
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,282000+0,383131+49,ffffff+99&1+1,0+69 */
+	background: -moz-linear-gradient(top,  rgba(40,32,0,1) 0%, rgba(40,32,1,1) 1%, rgba(56,49,49,0.29) 49%, rgba(136,131,131,0) 69%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(40,32,0,1) 0%,rgba(40,32,1,1) 1%,rgba(56,49,49,0.29) 49%,rgba(136,131,131,0) 69%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(40,32,0,1) 0%,rgba(40,32,1,1) 1%,rgba(56,49,49,0.29) 49%,rgba(136,131,131,0) 69%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282000', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+
 .course-section{
-	background-color:orange;
 	margin: 20px 0;
 }
 
+.course-section h2{
+	margin: 20px 0;
+	font-size:40px;
+	font-family: 'Do Hyeon', sans-serif;
+	color:#999;
+	border-bottom: solid 5px #999;
+}
+.course-section-contents{
+	
+}
 
-@media (max-width:480px){
+
+
+.course-title{
+	overflow: hidden;
+}
+
+.course-title h1{
+	color:white;
+	margin-bottom:20px;
+	font-weight:bold;
+	font-size:40px;
+	line-height:1;
+	text-transform:uppercase;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.course-title p,
+.course-creator-contents{
+	color:white;
+}
+
+
+
+.course-creator{
+	margin-left:10px;
+	float:right;
+	width:100px;
+	text-align:right;
+}
+
+.course-creator-logo{
+	width:50px;
+	border-radius:50%;
+}
+
+.course-creator-contents{
+	padding:5px;
+}
+
+.course-title h1,
+.course-creator,
+.star{
+	position:relative;
+	z-index:3;
+}
+
+.course-section-contents{
+	
+}
+
+.curriculum{
+	background-color:#333;
+}
+
+.curriculum h3{
+	padding:10px 20px;
+}
+
+
+.curriculum-item{
+	background-color:#444;
+}
+
+.curriculum-item-list{
+	margin:10px;
+	padding:10px;
+	background-color:#111;
+}
+
+.curriculum-link{
+	background-color:rgba(255,255,255,0.05);
+	display:block;
+	margin:10px 25px;
+	padding:10px;
+}
+
+.curriculum-item-list li{
+	list-style-type:none;
+}
+
+
+.curriculum-link::before{
+	content:'';
+	display:inline-block;
+	padding-right:10px;
+	border-width:5px;
+	border-style:solid;
+	border-color:transparent transparent transparent currentColor;
+	width:0;
+	height:0;
+}
+
+.curriculum-item-list span{
+	float:right;
+	font-size:0.8em;
+	color:orangered;
+	opacity:0.5;
+	padding-left:10px;
+	display:inline-block;
+}
+
+.curriculum-link:hover{
+	color:white;
+}
+
+.star,
+.star::before{
+	background-image:url("images/star-sprite.png");
+	width:150px;
+	height:30px;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.star::before{
+	background-position:left bottom;
+	width:0;
+	content:'';
+	display:block;
+}
+
+.star_1::before{
+	width:20%;
+}
+.star_2::before{
+	width:40%;
+}
+.star_3::before{
+	width:60%;
+}
+.star_4::before{
+	width:80%;
+}
+.star_5::before{
+	width:100%;
+}
+
+.star span{
+	position:absolute;
+	width:1px;
+	height:1px;
+	margin:-1px;
+	clip:rect(0,0,0,0);
+	overflow:hidden;
+}
+
+
+@media (max-width: 760px){
+	.l_sidebar{
+		width:auto;
+		float:none;
+		margin-left:0;
+	}
+	
+	.sidebar{
+		width:auto;
+		float:none;
+	}
+}
+
+
+@media (max-width:500px){
 	.sidebar{
 		width:auto;
 		float:none;
@@ -144,5 +369,17 @@ body{
 	.video{
 	width:auto;
 	height:40vw;
+	}
+	
+	.course-creator,
+	.course-title{
+		float:none;
+		margin:0;
+		width:auto;
+		text-align:center;
+	}
+	
+	.curriculum-item-list span{
+	display:none;
 	}
 }
