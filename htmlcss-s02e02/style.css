@@ -3,7 +3,7 @@
 
 /* 전체 클래스*/
 
-body, h1, h2, h3, p, ul, li,a{
+body, h1, h2, h3, p, ul, li,a, span{
 	margin:0;
 	padding:0;
 }
@@ -19,6 +19,9 @@ h1,h2,h3,h4,h5,h6{
 	font-size:100%;
 }
 
+li{
+	list-style-type:none;
+}
 /* 버튼 */
 .button{
 	color:white;
@@ -188,6 +191,7 @@ body{
 	margin: 20px 0;
 }
 
+
 .course-section h2{
 	margin: 20px 0;
 	font-size:40px;
@@ -196,9 +200,47 @@ body{
 	border-bottom: solid 5px #999;
 }
 .course-section-contents{
-	
+
 }
 
+.l_row{
+	margin:20px 0;
+}
+
+.l_col{
+	float:left;
+	margin-bottom:20px;
+	box-sizing:border-box;
+	padding:0 10px;
+}
+
+
+.item{
+	background-color:#222;
+}
+
+.item-cover img{
+	width:100%;
+}
+
+.item-cover-contetns{
+	padding:20px;
+}
+
+.item-cover-contetns span{
+	color:white;
+	white-space:noswap;
+	font-size:1.5em;
+	margin-bottom:10px;
+	margin-top:-5px;
+	display:inline-block;
+}
+
+.item-cover-contetns p{
+	line-height:1.5;
+	overflow:hidden;
+	height:6em;
+}
 
 
 .course-title{
@@ -345,6 +387,18 @@ body{
 	overflow:hidden;
 }
 
+.l_col_12_12 { width: 100%; }
+.l_col_11_12 { width: 91.66666667%; }
+.l_col_10_12 { width: 83.33333333%; }
+.l_col_9_12  { width: 75%; }
+.l_col_8_12  { width: 66.66666667%; }
+.l_col_7_12  { width: 58.33333333%; }
+.l_col_6_12  { width: 50%; }
+.l_col_5_12  { width: 41.66666667%; }
+.l_col_4_12  { width: 33.33333333%; }
+.l_col_3_12  { width: 25%; }
+.l_col_2_12  { width: 16.66666667%; }
+.l_col_1_12  { width: 8.33333333%; }
 
 @media (max-width: 760px){
 	.l_sidebar{
@@ -382,4 +436,14 @@ body{
 	.curriculum-item-list span{
 	display:none;
 	}
+	
+	.l_col_mobile_12_12 { width: 100%; }
+}
+
+@media (min-width:1400px){
+	.l_col_ld_3_12 { width: 25%; }
+	.item-cover-contetns span{
+	font-size:1em;
+}
+
 }
