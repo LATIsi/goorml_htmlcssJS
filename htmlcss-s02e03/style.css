@@ -9,8 +9,9 @@ a {
 	color: inherit;
 }
 
-li{list-style-type:none;
-display:block;}
+li{
+	list-style-type:none;
+}
 
 /* Typograph */
 
@@ -32,19 +33,40 @@ display:block;}
 	overflow: hidden;
 }
 
-.l_col {
-	 background-color: orange;
-}
 
 .l_row {
 	 background-color: antiquewhite;
+	display:table;
+	table-layout:fixed;
 }
 
 
+.l_col {
+	background-color: orange;
+	float:left;
+	width:auto;
+	padding:0 10px;
+	box-sizing: border-box;
+	display:table-cell;
+}
+
+
+.item {
+	 background-color: dodgerblue;
+}
+
 /* Commons */
+.clearfix:before,
 .clearfix:after {
 	content: ' ';
+	clear:both;
 	display: table;
+}
+
+.clearfix:after {
+	content: ' ';
+	clear:both;
+	display: block;
 }
 
 .star {
