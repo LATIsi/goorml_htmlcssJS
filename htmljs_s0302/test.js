@@ -116,15 +116,110 @@ var crudapp = new function(){
 		var btnadd = document.createElement('input');
 		 btnadd.setAttribute('type','button');
 		 btnadd.setAttribute('id','add'+j);
-		 btnadd.setAttribute('style','background-color:orangered; border:none; padding:5px;');
+		 btnadd.setAttribute('style','background-color:yellowgreen; border:none; padding:5px;');
 		 btnadd.setAttribute('value','add');
-		 btnadd.setAttribute('onclick','crudapp.add(this)');
+		 btnadd.setAttribute('onclick','crudapp.CreateAdd(this)');
 		 this.td.appendChild(btnadd);
 		
 		
-	var div = document.getElementById('cover');
-	div.innerHTML = '수강관리 앱';
-	div.appendChild(table);
+		var div = document.getElementById('cover');
+		div.innerHTML = '수강관리 앱';
+		div.appendChild(table);
+		
+	}
+	
+	
+	this.delete= (eventbutton)=>{
+		var target = eventbutton.parentNode.parentNode.rowIndex;
+		console.log(target);
+		this.myClass.splice((target-1),1);
+		//-1을 하는이유가 th가 있으니까... splice는 기존요소를 삭제/교체하는것
+		crudapp.createTable();
+	}
+	
+	this.update= (eventbutton)=>{
+		var targetidx = eventbutton.parentNode.parentNode.rowIndex;
+		var trdata =document.getElementById('classTable').rows[targetidx];
+		
+		for(var i=1; i< this.col.length; i++){
+			
+			if(i === 2){
+				var td = trdata.getElementsByTagName("td")[i];
+				var select = document.createElement("select")
+				select.innerText = `<option value = "${td.innerText}">${td.innerText}</option>`;	
+				for(var k = 0; k<this.Category.length; k++){
+					select.innerHTML = select.innerHTML +`<option value = "${this.Category[k]}">${this.Category[k]}</option>`;		
+				}
+				td.innerText="";
+				td.appendChild(select);
+			}
+			else{
+				var td= trdata.getElementsByTagName("td")[i];
+				var input =document.createElement("input");
+				input.setAttribute("type","text");
+				input.setAttribute("value",td.innerText);
+				td.innerText="";
+				td.appendChild(input);				
+			}
+		}
+		
+		var save =document.getElementById('save'+(targetidx-1));
+		save.setAttribute('style','background-color:gray; display:block; border:none; padding:5px;')
+		eventbutton.setAttribute('style','display:none;');
+		
+		//save메소드
+		
+	
+	this.save= (eventbutton)=>{
+		var target = eventbutton.parentNode.parentNode.rowIndex;
+		var trData = document.getElementById('classTable').rows[target];
+		
+		//새롭게 얻은 값으로 myclass 배열 생신
+		
+		for(var i=1;i<this.col.length;i++){
+			var td = trData.getElementsByTagName("td")[i];
+			if(td.childNodes[0].getAttribute('type')==='text' || td.childNodes[0].getAttribute('type')==='select'){
+				this.myClass[target-1][this.col[i]] = td.childNodes[0].value;
+			}
+		}
+		this.createTable();
+		
+		
+	}	
+		
+		
+		
+		
+	}
+	
+	this.CreateAdd= (eventbutton)=>{
+		var targetidx = eventbutton.parentNode.parentNode.rowIndex;
+		var trdata =document.getElementById('classTable').rows[targetidx];
+		
+		var obj = {};
+		
+		//tr 데이터에서 실제 입력한 대상 td속의 키와 값만 뽑아서 obj에 저장하기.
+
+			for(var i = 1; i<this.col.length;i++){
+				var td = trdata.getElementsByTagName("td")[i];
+				
+				if( td.childNodes[0].getAttribute('type') === 'text' || td.childNodes[0].tagName === 'SELECT' ){
+					var txtVal = td.childNodes[0].value;
+					
+					if(txtVal != '' ){
+						obj[this.col[i]] = txtVal;
+					}else{
+						obj='';
+						alert('모든 내용을 채워주세요!');
+						break;
+						
+					}	
+				}
+			}
+		
+		obj[this.col[0]]= this.myClass.length +1;
+		this.myClass.push(obj);
+		this.createTable();
 		
 	}
 	
