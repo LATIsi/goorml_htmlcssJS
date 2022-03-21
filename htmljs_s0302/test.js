@@ -100,7 +100,14 @@ var crudapp = new function(){
 								}
 							newcell.appendChild(select);
 							}
-						else{
+					else if(z==3){
+							//숫자만 입력하게..
+							var notNumber = document.createElement('input');
+							notNumber.setAttribute('type',"text");
+							notNumber.setAttribute('onkeyup',"this.value=this.value.replace(/[^0-9]/g,'');");
+							newcell.appendChild(notNumber);
+							}
+					else{
 							var tBox = document.createElement('input');
 							tBox.setAttribute('type','text');
 							tBox.setAttribute('value','');
@@ -153,6 +160,14 @@ var crudapp = new function(){
 				td.innerText="";
 				td.appendChild(select);
 			}
+			else if(i === 3){
+				var td = trdata.getElementsByTagName("td")[i];
+				var notNumber = document.createElement("input");
+				notNumber.setAttribute('type',"text");
+				notNumber.setAttribute('onkeyup',"this.value=this.value.replace(/[^0-9]/g,'');");
+				td.innerText="";
+				td.appendChild(notNumber);					   
+			}
 			else{
 				var td= trdata.getElementsByTagName("td")[i];
 				var input =document.createElement("input");
@@ -186,10 +201,6 @@ var crudapp = new function(){
 		
 		
 	}	
-		
-		
-		
-		
 	}
 	
 	this.CreateAdd= (eventbutton)=>{
@@ -211,8 +222,7 @@ var crudapp = new function(){
 					}else{
 						obj='';
 						alert('모든 내용을 채워주세요!');
-						break;
-						
+						return;
 					}	
 				}
 			}
