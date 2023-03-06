@@ -1,0 +1,17 @@
+p, u1, h1, h2{
+	margin:0;
+	padding:0;
+}
+
+li{
+	list-style-type:none;
+}
+
+body{
+	background-color:whitesmoke;
+}
+
+img{
+	height: 150px;
+	width: 300px;
+}
